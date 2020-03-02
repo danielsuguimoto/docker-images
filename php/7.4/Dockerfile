@@ -16,3 +16,5 @@ RUN apk --no-cache add autoconf su-exec bash git openssh-client icu shadow procp
     && docker-php-ext-enable redis \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && chmod +x /usr/local/bin/composer
+
+EXPOSE 9000
