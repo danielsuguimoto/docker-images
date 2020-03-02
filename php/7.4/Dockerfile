@@ -2,6 +2,8 @@ FROM php:7.4-fpm-alpine
 
 WORKDIR /app
 
+RUN apk --update add gcc make g++ zlib-dev
+
 RUN apk --no-cache add autoconf su-exec bash git openssh-client icu shadow procps \
         freetype libpng libjpeg-turbo libzip-dev \
         jpegoptim optipng pngquant gifsicle libldap \
