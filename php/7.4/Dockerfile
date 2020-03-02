@@ -2,9 +2,7 @@ FROM php:7.4-fpm-alpine
 
 WORKDIR /app
 
-RUN set -xe \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apk --no-cache add \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng-dev \
