@@ -10,9 +10,7 @@ RUN apk --no-cache add autoconf su-exec bash git openssh-client icu shadow procp
         imagemagick-dev openldap-dev oniguruma-dev \
     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
     && docker-php-ext-install gd pdo pdo_mysql zip exif pcntl opcache mbstring intl\
-    && pecl install -o -f redis-5.0.2 \
+    && pecl install imagick-3.4.4 redis \
     && docker-php-ext-enable redis \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-    && chmod a+x /usr/local/bin/composer \
-    && rm -rf /tmp/pear \
-    && rm -rf /var/lib/apt/lists/*
+    && chmod +x /usr/local/bin/composer
