@@ -2,7 +2,7 @@ FROM php:7.4-fpm-alpine
 
 WORKDIR /app
 
-RUN apk --no-cache add su-exec bash git openssh-client icu shadow procps \
+RUN apk --no-cache add autoconf su-exec bash git openssh-client icu shadow procps \
         freetype libpng libjpeg-turbo libzip-dev imagemagick \
         jpegoptim optipng pngquant gifsicle libldap \
         freetype-dev libpng-dev libjpeg-turbo-dev \
