@@ -1,5 +1,7 @@
 FROM php:7.4-fpm-alpine
 
+LABEL maintainer="Daniel Jun Suguimoto <danielsuguimoto@gmail.com>"
+
 WORKDIR /app
 
 RUN apk --update add gcc make g++ zlib-dev
