@@ -10,8 +10,6 @@ RUN wget -O gh.tgz https://github.com/cli/cli/releases/download/v0.12.0/gh_0.12.
 
 ENV PATH = "/gh/bin:$PATH"
 
-RUN rm -v gh.tgz
-
 VOLUME /git
 WORKDIR /git
 
