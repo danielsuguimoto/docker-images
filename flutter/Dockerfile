@@ -18,6 +18,10 @@ RUN git clone https://github.com/flutter/flutter.git
 
 ENV PATH "$PATH:/flutter/bin:/android/sdk/platform-tools"
 
+RUN flutter channel stable \
+    flutter upgrade \
+    flutter precache
+
 RUN flutter precache
 
 WORKDIR /app
