@@ -22,4 +22,3 @@ RUN flutter precache
 WORKDIR /app
 
 ENTRYPOINT ["/flutter/bin/flutter"]
-CMD ["doctor"]
